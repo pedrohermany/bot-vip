@@ -5,8 +5,8 @@ import os
 import asyncio
 import time
 
-BOT_TOKEN = os.getenv("BOT_TOKEN")
-GROUP_ID = int(os.getenv("GROUP_ID"))
+BOT_TOKEN = os.environ.get("BOT_TOKEN", "8546135640:AAEMwgdxT2gLVD-MY-EyLXnu9vDo30YM-Hk")
+GROUP_ID = int(os.environ.get("GROUP_ID", "-1003956517196"))
 
 app_flask = Flask(__name__)
 bot_app = ApplicationBuilder().token(BOT_TOKEN).build()
